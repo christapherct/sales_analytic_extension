@@ -1,0 +1,78 @@
+<!--<odoo>-->
+<!--    <record id="view_crm_lead_tree_inherit" model="ir.ui.view">-->
+<!--        <field name="name">crm.lead.tree.inherit.salesperson</field>-->
+<!--        <field name="model">crm.lead</field>-->
+<!--        <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>  &lt;!&ndash; Inherit the correct tree view &ndash;&gt;-->
+<!--        <field name="arch" type="xml">-->
+<!--&lt;!&ndash;            <xpath expr="//tree" position="before">&ndash;&gt;-->
+<!--&lt;!&ndash;                <field name="name"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="o_view_nocontent">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <p class="o_view_nocontent_empty">This is your opportunity management section. Use the filters to&ndash;&gt;-->
+<!--&lt;!&ndash;                        find specific opportunities.&ndash;&gt;-->
+<!--&lt;!&ndash;                    </p>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </xpath>&ndash;&gt;-->
+<!--        </field>-->
+<!--    </record>-->
+<!--</odoo>-->
+<!--<odoo>-->
+<!--    <record id="view_crm_lead_tree_inherit" model="ir.ui.view">-->
+<!--        <field name="name">crm.lead.tree.inherit.dropdown</field>-->
+<!--        <field name="model">crm.lead</field>-->
+<!--        <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//tree" position="before">-->
+<!--                <header>-->
+<!--                    <div class="o_dropdown">-->
+<!--                        <label for="salesperson_filter" class="dropdown-toggle btn btn-primary">-->
+<!--                            Salesperson-->
+<!--                        </label>-->
+<!--                        <div class="dropdown-menu">-->
+<!--                            <field name="user_id" widget="many2one" options="{'no_create': True}" placeholder="Select Salesperson"/>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </header>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+<!--</odoo>-->
+<!--<odoo>-->
+<!--    <record id="view_crm_lead_filter_inherit" model="ir.ui.view">-->
+<!--        <field name="name">crm.lead.search.inherit.salesperson</field>-->
+<!--        <field name="model">crm.lead</field>-->
+<!--        <field name="inherit_id" ref="crm.view_crm_case_leads_filter"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//filter[@name='assigned_to_me']" position="after">-->
+<!--                <filter name="filter_by_salesperson" string="Salesperson"-->
+<!--                        context="{'group_by': 'user_id'}"/>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+
+<!--    <record id="view_crm_lead_tree_inherit" model="ir.ui.view">-->
+<!--        <field name="name">crm.lead.tree.inherit.salesperson</field>-->
+<!--        <field name="model">crm.lead</field>-->
+<!--        <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <tree position="inside">-->
+<!--                <field name="user_id"/>-->
+<!--            </tree>-->
+<!--        </field>-->
+<!--    </record>-->
+
+<!--    <record id="view_crm_lead_tree_dropdown_inherit" model="ir.ui.view">-->
+<!--        <field name="name">crm.lead.tree.inherit.salesperson.dropdown</field>-->
+<!--        <field name="model">crm.lead</field>-->
+<!--        <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//tree" position="before">-->
+<!--                <div class="o_salesperson_filter">-->
+<!--                    <label for="salesperson_dropdown">Salesperson:</label>-->
+<!--                    <select id="salesperson_dropdown" class="form-control">-->
+<!--                        <option value="">All Salespersons</option>-->
+<!--                    </select>-->
+<!--                </div>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+<!--</odoo>-->

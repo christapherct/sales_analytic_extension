@@ -1,0 +1,12 @@
+<odoo>
+    <record id="view_sale_order_inherit" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/notebook/page/field/tree/field[@name='analytic_distribution']" position="before">
+                <field name="analytic_account_id" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

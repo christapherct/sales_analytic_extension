@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_season_master,name.season.master,model_season_master,,1,1,1,1
+access_customer_type_master,name.customer.type.master,model_customer_type_master,,1,1,1,1
+
